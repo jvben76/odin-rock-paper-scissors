@@ -37,7 +37,7 @@ let computer;
 
 
 
-function getComputerChoice(){  //create function to choose move option for computer
+function getComputerChoice() {  //create function to choose move option for computer
 
     let computerChoice = computerMoves[Math.floor(Math.random() * computerMoves.length)];
     return computerChoice;
@@ -45,123 +45,127 @@ function getComputerChoice(){  //create function to choose move option for compu
 
 
 
-function playRound (playerSelection, computerSelection){   //create function to run a round
+function playRound(playerSelection, computerSelection) {   //create function to run a round
 
-//game logic//
-    if (playerSelection === 'rock' && computerSelection === 'paper'){
+    //game logic//
+    //Multiple conditional scenarios to determine the winner of the round
+    if (playerSelection === 'rock' && computerSelection === 'paper') {
 
-        console.log(`PLAYER: ${playerSelection}  COMPUTER: ${computerSelection}`);
-        console.log('Computer wins this round: paper beats rock!');
+        console.log(`YOU CHOSE: ${playerSelection}  COMPUTER CHOSE: ${computerSelection}`);
+        console.log('You lose this round: paper beats rock!');
         computerScore += 1;
-        console.log(`SCORE | PLAYER: ${playerScore} COMPUTER: ${computerScore}`)
+        console.log(`SCORE | YOU: ${playerScore} COMPUTER: ${computerScore}`)
         return computerScore;
 
-    } else if (playerSelection === 'paper' && computerSelection === 'rock'){
+    } else if (playerSelection === 'paper' && computerSelection === 'rock') {
 
-        console.log(`PLAYER: ${playerSelection}  COMPUTER: ${computerSelection}`);
-        console.log('Player wins this round: paper beats rock');
+        console.log(`YOU CHOSE: ${playerSelection}  COMPUTER CHOSE: ${computerSelection}`);
+        console.log('You win this round: paper beats rock');
         playerScore += 1;
-        console.log(`SCORE | PLAYER: ${playerScore} COMPUTER: ${computerScore}`);
+        console.log(`SCORE | YOU: ${playerScore} COMPUTER: ${computerScore}`);
         return playerScore;
 
-    } else if (computerSelection === 'scissors' && playerSelection === 'paper'){
+    } else if (computerSelection === 'scissors' && playerSelection === 'paper') {
 
-        console.log(`PLAYER: ${playerSelection}  COMPUTER: ${computerSelection}`);
-        console.log('Computer wins this round: scissors beats paper!');
+        console.log(`YOU CHOSE: ${playerSelection}  COMPUTER CHOSE: ${computerSelection}`);
+        console.log('You lose this round: scissors beats paper!');
         computerScore += 1;
-        console.log(`SCORE | PLAYER: ${playerScore} COMPUTER: ${computerScore}`);
+        console.log(`SCORE | YOU: ${playerScore} COMPUTER: ${computerScore}`);
         return computerScore;
 
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
 
-        console.log(`PLAYER: ${playerSelection}  COMPUTER: ${computerSelection}`);
-        console.log('Player wins this round: scissors beats paper!');
+        console.log(`YOU CHOSE: ${playerSelection}  COMPUTER CHOSE: ${computerSelection}`);
+        console.log('You win this round: scissors beats paper!');
         playerScore += 1;
-        console.log(`SCORE | PLAYER: ${playerScore} COMPUTER: ${computerScore}`);
+        console.log(`SCORE | YOU: ${playerScore} COMPUTER: ${computerScore}`);
         return playerScore;
 
-    } else if (computerSelection === 'rock' && playerSelection === 'scissors'){
+    } else if (computerSelection === 'rock' && playerSelection === 'scissors') {
 
-        console.log(`PLAYER: ${playerSelection}  COMPUTER: ${computerSelection}`);
-        console.log('Computer wins this round: rock beats scissors!');
+        console.log(`YOU CHOSE: ${playerSelection}  COMPUTER CHOSE: ${computerSelection}`);
+        console.log('You lose this round: rock beats scissors!');
         computerScore += 1;
-        console.log(`SCORE | PLAYER: ${playerScore} COMPUTER: ${computerScore}`);
+        console.log(`SCORE | YOU: ${playerScore} COMPUTER: ${computerScore}`);
         return computerScore;
-        
 
-    } else if (playerSelection === 'rock' && computerSelection === 'scissors'){
-        console.log(`PLAYER: ${playerSelection}  COMPUTER: ${computerSelection}`);
-        console.log('Player wins this round: rock beats scissors!');
+
+    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        console.log(`YOU CHOSE: ${playerSelection}  COMPUTER CHOSE: ${computerSelection}`);
+        console.log('You win this round: rock beats scissors!');
         playerScore += 1;
-        console.log(`SCORE | PLAYER: ${playerScore} COMPUTER: ${computerScore}`);
+        console.log(`SCORE | YOU: ${playerScore} COMPUTER: ${computerScore}`);
         return playerScore;
-        
+
     } else {
-        console.log(`PLAYER: ${playerSelection}  COMPUTER: ${computerSelection}`);
+        console.log(`YOU CHOSE: ${playerSelection}  COMPUTER CHOSE: ${computerSelection}`);
         console.log('Invalid round: Nobody wins this one!');
-        console.log(`SCORE | PLAYER: ${playerScore} COMPUTER: ${computerScore}`);
-        
-        
+        console.log(`SCORE | YOU: ${playerScore} COMPUTER: ${computerScore}`);
+
+
     }
 }
 
-function checkValidInput(){ 
-//Run's if player gives unrecognised input until recognised input is provided
-    
-    player;
-        
-            if (player == 'rock' || player == 'paper' || player == 'scissors') {
 
-                return player
-                
-                
-            } else {
-                while (player !== 'rock' || player !== 'paper' || player !== 'scissors') {
-                    alert('Please enter a valid value');
-                 player = prompt('Choose between rock, paper or scissors and type your choice below', '');
-                  player = player.toLowerCase(); //make player input case insensitive;
-                if (player == 'rock' || player == 'paper' || player == 'scissors') {
-                    break;
-                }
-                }
+
+function checkValidInput() {
+
+    player;
+
+    if (player == 'rock' || player == 'paper' || player == 'scissors') {
+
+        return player;
+
+    } else {
+
+        while (player !== 'rock' || player !== 'paper' || player !== 'scissors') {
+
+            alert('Please enter a valid value');
+            player = prompt('Choose between rock, paper or scissors and type your choice below', '');
+            player = player.toLowerCase(); //make player input case insensitive;
+
+            if (player == 'rock' || player == 'paper' || player == 'scissors') {
+                break;
             }
-               
-        
-         
-    
+        }
+    }
+
+
 }
 
 function game() {   //create function to start game
-    
-   for (i = 1; i < 6; i++){
-     player = prompt('Choose between rock, paper or scissors and type your choice below', '');
-     player = player.toLowerCase(); //make player input case insensitive;
-     console.log(player);
-     checkValidInput();
-     
-     computer = getComputerChoice();
-     console.log(' ')
-     console.log(`********ROUND_${i}********`);
-     
-    playRound(player, computer);
-   }
 
-   console.log(' ');
+    for (i = 1; i < 6; i++) {
+        player = prompt('Choose between rock, paper or scissors and type your choice below', '');
+        player = player.toLowerCase(); //make player input case insensitive;
+        //console.log(player);
+        checkValidInput();
+        computer = getComputerChoice();
 
-  if (playerScore > computerScore){
-    
-    console.log('********GAME OVER!********');
-    console.log(`PLAYER WINS | SCORE: ${playerScore} - ${computerScore}`);
-    
-  } else if (computerScore > playerScore){
-    console.log('********GAME OVER!********');
-    console.log(`COMPUTER WINS | SCORE: ${computerScore} - ${playerScore}`);
+        console.log(' ')
+        console.log(`********ROUND_${i}********`);
+        playRound(player, computer);
+    }
 
-  } else {
-    console.log('********GAME OVER!********');
-    console.log(`GAME IS A TIE | SCORE: ${computerScore} - ${playerScore}`);
-  }
-   
+    console.log(' ');
+
+    if (playerScore > computerScore) {
+
+        console.log('********GAME OVER!********');
+        
+        console.log(`________YOU WIN________\n\nYOUR SCORE: ${playerScore}  COMPUTER SCORE: ${computerScore}`);
+
+    } else if (computerScore > playerScore) {
+        console.log('********GAME OVER!********');
+        
+        console.log(`________COMPUTER WINS________\n\nCOMPUTER SCORE: ${computerScore}  YOUR SCORE: ${playerScore}`);
+
+    } else {
+        console.log('********GAME OVER!********');
+        
+        console.log(`________GAME IS A TIE________\n\nYOUR SCORE: ${computerScore}  COMPUTER SCORE: ${playerScore}`);
+    }
+
 }
 
 game();
