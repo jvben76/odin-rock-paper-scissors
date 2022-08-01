@@ -11,22 +11,37 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <button class="choiceBtns" id="rock">ROCK</button>
-    <button class="choiceBtns" id="paper">PAPER</button>
-    <button class="choiceBtns" id="scissors">SCISSORS</button>
 
-    <div class='game-details'>
+    <div class = 'start-button-container'>
+        <button id = 'start-button'>START</button>
+    </div>    
+    <div class = 'game-buttons hidden'>
+        <button class="choiceBtns" id="rock">ROCK</button>
+        <button class="choiceBtns" id="paper">PAPER</button>
+        <button class="choiceBtns" id="scissors">SCISSORS</button>
+    </div>
+    <div class = "intro hidden">
+        <h2>CLICK ON ONE OF THE MOVES ABOVE<br>TO PLAY THE FIRST ROUND</h2>
+    </div>
+    <div class='game-details hidden'>
         <p id ="round-num"></p>
         <p id ="round-moves"></p>
         <p id ="round-summary"></p>
         <p id ="round-score"></p>
+    </div>
+    <div class = "end-game-text">
+        <p id = "end-game-title"></p>
+        <p id = "end-game-score"></p>
+    </div>
+    <div class = 'restart-button-container hidden'>
+        <button  id = 'restart-button'>RESTART</button>
     </div>
     <script src='script.js'></script>
 </body>
