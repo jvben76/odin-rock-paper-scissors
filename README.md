@@ -4,9 +4,10 @@ This project focuses on building the core logic for a 'Rock, Paper, Scissors' ga
 
 Its main purpose is as a training project to get comfortable with JavaScript programming working with functions, variables & conditional logic and to practice problem-solving techniques in programming.
 
-The script output is entirely directed to the console and does not output anything into the DOM. As such, there are no UI components as of yet aside from a basic window prompt allowing a user to input data necessary for the JavaScript game logic to run properly.
 
-At a later date, this project will be updated with a functional UI through which the user (player) can take more actions and where output data can be displayed in a more presentable manner.
+
+<br>
+<h3>LIVE PREVIEW:</h3>https://jvben76.github.io/odin-rock-paper-scissors/
 
 <br>
 
@@ -15,10 +16,11 @@ At a later date, this project will be updated with a functional UI through which
 ># How to play:
 ><br>
 > 
-> - Open the project's index.html file in the browser and open the browser console by typing 'ctrl + shft + i'  which opens the browser's DevTool's application and then click on the 'console' tab (right-click inspect won't work due to the presence of a prompt)
-> - A prompt box will have appeared at the top of the browser window asking the player to select an option between 'rock', 'paper' or 'scissors'. The player types their choice into the text-field provided and continue either by clicking 'OK' or by pressing enter on their keyboard -  this input will be the player's move choice against the computer.
-> - If the player provides an unrecognised input, an alert will display asking the player to provide a recognised input, when this happens, click ok on the alert and the game prompt should display again asking for you to choose an option.
-> - the console will print out information on what round the player is on, what the player and computer chose to play and who won or whether or not it was a tie (ex: player: rock computer: rock) by displaying 'invalid round', all in that order.
+> - Clicking on this <a href = "https://jvben76.github.io/odin-rock-paper-scissors/">link</a> or the live-preview link above will open 'rock-paper-scissors' in your browser. Click on the start button to begin playing
+> - After clicking start, click on one of the three buttons being displayed labelled 'rock', 'paper' or 'scissors' respectively to play the first round, click on one of these buttons to play a new round
+> - A box will pop up showing the round/game status: round winner, computer & player scores, moves played, round number and if 5 rounds have been played will display an end-game status box with the final score and game winner
+> - Click on the restart button below the round-status box to reset the game, then click the start button to play again.
+> - <h3>Game Rules:</h3> Rock beats scissors, paper beats rock and scissors beats paper. 1 point is added to the score of whoever wins the round. Winner is determined according to the highest score by the end of the five rounds. No point is awarded if round is a tie, and there is no winner if game is a tie.
 >   <br>
 >   <br>
 > <br>
@@ -26,43 +28,32 @@ At a later date, this project will be updated with a functional UI through which
 
 > <br>
 >
-> # Example of game round output: 
+> # Example of game round UI: 
 >
->******* ROUND_1 ********
 >
->player: rock computer: paper 
+><img src = "./resources/rps-ex-1.png" >
 ><br>
 >
->Computer wins this round: Paper beats rock!
-> <br>
-> 
 > 
 >
 ><br>
 ><br>
 >
 >
-> - The next round will automatically begin and a new prompt will appear. Repeat the above process to play the round and play through the game.
-> - The game lasts for 5 rounds and a winner will be listed on completion of the fifth round.
-><br>
-><br>
+> 
 ><br>
 
 
 ><br>
 >
->  # Example of end-game output
+>  # Example of end-game UI
 ><br>
 >
+><img src = "./resources/rps-ex-2.png" >
 >
->******** GAME OVER ********
->
->COMPUTER WINS | SCORE: 1 - 2
-><br>
 ><br>
 ><br>
 >
-> - Refresh the page to play again.
 > <br>
 > <br>
 
